@@ -60,3 +60,7 @@ header {
   background: #003f8a;
   transform: scale(1.05);
 }
+
+.search button:active {
+  transform: scale(0.95);
+}
