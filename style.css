@@ -22,7 +22,7 @@ header {
 }
 
 .logo img {
-  height: 10em;
+  height: 12em;
   margin-right: 1rem;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -33,7 +33,7 @@ header {
   justify-content: center; 
   align-items: center;
   padding: 1rem;
-  background: #f4f4f4; 
+  /* background: #f4f4f4;  */
   margin-top: 2rem; 
 }
 
