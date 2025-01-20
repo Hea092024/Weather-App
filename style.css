@@ -7,6 +7,12 @@
     box-sizing: border-box;
 }
 
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
 header {
   display: flex;
   justify-content: center;
@@ -63,4 +69,8 @@ header {
 
 .search button:active {
   transform: scale(0.95);
+}
+
+main {
+  flex: 1;
 }
