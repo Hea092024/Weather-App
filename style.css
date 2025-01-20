@@ -55,3 +55,8 @@ header {
   font-weight: bold;
   transition: background 0.3s, transform 0.2s;
 }
+
+.search button:hover {
+  background: #003f8a;
+  transform: scale(1.05);
+}
