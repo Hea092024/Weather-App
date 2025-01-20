@@ -1,16 +1,17 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+html,
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 header {
@@ -36,11 +37,11 @@ header {
 
 .search-container {
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   align-items: center;
   padding: 1rem;
   /* background: #f4f4f4;  */
-  margin-top: 2rem; 
+  margin-top: 2rem;
 }
 
 .search input {
@@ -73,4 +74,25 @@ header {
 
 main {
   flex: 1;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  color: black;
+  font-size: 1rem;
+  align-items: center;
+  background: #f4f4f4;
+}
+
+footer p {
+  margin: 5px;
+}
+
+footer a {
+  font-size: 1.2rem;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
