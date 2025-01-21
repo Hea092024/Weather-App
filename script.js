@@ -22,6 +22,10 @@ async function getWeatherData(city) {
     "location"
   ).textContent = `${data.location.name}, ${data.location.country}`;
 
+    document.getElementById(
+      "current-temp"
+    ).textContent = `${data.current.temp_c} &deg;C`;
+
   const weatherIcon = document.getElementById("weather-icon");
   const iconUrl = data.current.condition.icon;
   weatherIcon.src = `https:${iconUrl}`;
