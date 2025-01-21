@@ -10,7 +10,6 @@
 
 // getWeatherData("Paris");
 
-
 async function getWeatherData(city) {
   const apiKey = "65b97b72fa58428d975121941252001";
   const url = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`;
@@ -22,9 +21,8 @@ async function getWeatherData(city) {
     "location"
   ).textContent = `${data.location.name}, ${data.location.country}`;
 
-    document.getElementById(
-      "current-temp"
-    ).textContent = `${data.current.temp_c} &deg;C`;
+  document.getElementById("current-temp").textContent = `${Math.round(
+    data.current.temp_c)} ºC`;
 
   const weatherIcon = document.getElementById("weather-icon");
   const iconUrl = data.current.condition.icon;
