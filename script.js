@@ -22,9 +22,13 @@ async function getWeatherData(city) {
     "location"
   ).textContent = `${data.location.name}, ${data.location.country}`;
 
+  const weatherIcon = document.getElementById("weather-icon");
   const iconUrl = data.current.condition.icon;
-  document.getElementById("weather-icon").src = `https:${iconUrl}`;
+  weatherIcon.src = `https:${iconUrl}`;
+  weatherIcon.style.display = "block";
 }
+
+document.getElementById("weather-icon").style.display = "none";
 
 document.getElementById("search-btn").addEventListener("click", function () {
   const city = document.getElementById("city").value;
@@ -32,5 +36,6 @@ document.getElementById("search-btn").addEventListener("click", function () {
     getWeatherData(city);
   } else {
     document.getElementById("location").textContent = "Please enter a city.";
+    document.getElementById("weather-icon").style.display = "none";
   }
 });
