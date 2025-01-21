@@ -21,6 +21,9 @@ async function getWeatherData(city) {
   document.getElementById(
     "location"
   ).textContent = `${data.location.name}, ${data.location.country}`;
+
+  const iconUrl = data.current.condition.icon;
+  document.getElementById("weather-icon").src = `https:${iconUrl}`;
 }
 
 document.getElementById("search-btn").addEventListener("click", function () {
