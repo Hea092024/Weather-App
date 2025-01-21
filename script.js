@@ -22,7 +22,9 @@ async function getWeatherData(city) {
   ).textContent = `${data.location.name}, ${data.location.country}`;
 
   document.getElementById("current-temp").textContent = `${Math.round(
-    data.current.temp_c)} ºC`;
+    data.current.temp_c
+  )} ºC | ${Math.round(data.current.temp_f)} ºF`;
+
 
   const weatherIcon = document.getElementById("weather-icon");
   const iconUrl = data.current.condition.icon;
