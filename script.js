@@ -31,6 +31,8 @@ async function getWeatherData(city) {
      data.current.feelslike_f
    )} ºF`;
    
+
+   
   const weatherIcon = document.getElementById("weather-icon");
   const iconUrl = data.current.condition.icon;
   weatherIcon.src = `https:${iconUrl}`;
