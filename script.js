@@ -25,7 +25,12 @@ async function getWeatherData(city) {
     data.current.temp_c
   )} ºC | ${Math.round(data.current.temp_f)} ºF`;
 
-
+   document.getElementById(
+     "feels-like"
+   ).textContent = `Feels like: ${Math.round(data.current.feelslike_c)} ºC | ${Math.round(
+     data.current.feelslike_f
+   )} ºF`;
+   
   const weatherIcon = document.getElementById("weather-icon");
   const iconUrl = data.current.condition.icon;
   weatherIcon.src = `https:${iconUrl}`;
