@@ -31,7 +31,13 @@ async function getWeatherData(city) {
      data.current.feelslike_f
    )} ºF`;
    
-
+document.getElementById(
+    "wind-speed"
+  ).textContent = `Wind speed: ${Math.round(data.current.wind_kph)} km/h | ${Math.round(
+    data.current.wind_mph
+  )} mph`;
+  
+  document.getElementById("local-time").textContent = data.location.localtime;
    
   const weatherIcon = document.getElementById("weather-icon");
   const iconUrl = data.current.condition.icon;
