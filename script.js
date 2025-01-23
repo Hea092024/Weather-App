@@ -38,6 +38,10 @@ document.getElementById(
   )} mph`;
   
   document.getElementById("local-time").textContent = data.location.localtime;
+
+ document.getElementById(
+    "humidity"
+  ).textContent = `Humidity: ${data.current.humidity} %`;
    
   const weatherIcon = document.getElementById("weather-icon");
   const iconUrl = data.current.condition.icon;
