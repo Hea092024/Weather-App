@@ -21,9 +21,9 @@ async function getWeatherData(city) {
     "location"
   ).textContent = `${data.location.name}, ${data.location.country}`;
 
-  document.getElementById("current-temp").textContent = `${Math.round(
-    data.current.temp_c
-  )} ºC | ${Math.round(data.current.temp_f)} ºF`;
+    document.getElementById("current-temp").textContent = `${Math.round(
+      data.current.temp_c
+    )} ºC | ${Math.round(data.current.temp_f)} ºF`;
 
    document.getElementById(
      "feels-like"
@@ -37,11 +37,12 @@ document.getElementById(
     data.current.wind_mph
   )} mph`;
   
-  document.getElementById("local-time").textContent = data.location.localtime;
+  document.getElementById("local-time").textContent =`local-time ${data.location.localtime}`;
 
  document.getElementById(
     "humidity"
   ).textContent = `Humidity: ${data.current.humidity} %`;
+
    
   const weatherIcon = document.getElementById("weather-icon");
   const iconUrl = data.current.condition.icon;
