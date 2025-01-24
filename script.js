@@ -6,6 +6,7 @@
 //   const data = await result.json();
 //   console.log(`City: ${data.location.name}`);
 //   console.log(`Country: ${data.location.country}`);
+//   console.log(`Temperature: ${data.current.temp_c} ºC | ${data.current.temp_f} ºF`);
 // }
 
 // getWeatherData("Paris");
@@ -63,8 +64,6 @@ document.getElementById(
   weatherIcon.src = `https:${iconUrl}`;
   weatherIcon.style.display = "block";
 }
-
-
 
 document.getElementById("weather-icon").style.display = "none";
 
