@@ -31,7 +31,7 @@ header {
 .logo img {
   height: 12em;
   margin-right: 1rem;
-  border-radius: 5px;
+  border-radius: 50%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
