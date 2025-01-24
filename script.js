@@ -41,9 +41,9 @@ async function getWeatherData(city) {
 
    document.getElementById(
      "feels-like"
-   ).textContent = `Feels like: ${Math.round(data.current.feelslike_c)} ºC | ${Math.round(
-     data.current.feelslike_f
-   )} ºF`;
+   ).textContent = `Feels like: ${Math.round(
+     data.current.feelslike_c
+   )} ºC | ${Math.round(data.current.feelslike_f)} ºF`;
    
 document.getElementById(
     "wind-speed"
@@ -64,9 +64,23 @@ document.getElementById(
   weatherIcon.style.display = "block";
 }
 
+
+
 document.getElementById("weather-icon").style.display = "none";
 
-document.getElementById("search-btn").addEventListener("click", function () {
+document.getElementById("city").addEventListener("keydown", function (enter) {
+  if (enter.key === "Enter") {
+    const city = document.getElementById("city").value;
+    if (city) {
+      getWeatherData(city);
+    } else {
+      document.getElementById("location").textContent = "Please enter a city.";
+      document.getElementById("weather-icon").style.display = "none";
+    }
+  }
+});
+
+document.getElementById("search-btn").addEventListener("click" , function () {
   const city = document.getElementById("city").value;
   if (city) {
     getWeatherData(city);
