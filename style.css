@@ -85,7 +85,7 @@ main {
     background: #f8f9fa;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
+    max-width: 500px;
     margin: 3rem auto;
 }
 
@@ -98,6 +98,12 @@ main {
     display: none;
     width: 5rem;
     
+}
+
+#last-updated {
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: 1rem;
 }
 
 footer {
