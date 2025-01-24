@@ -86,7 +86,7 @@ main {
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     max-width: 500px;
-    margin: 2rem auto;
+    margin: 1rem auto;
 }
 
 .weather-info p {
@@ -125,4 +125,8 @@ footer a {
 
 footer a:hover {
   text-decoration: underline;
+}
+
+footer a:active {
+  color: #0056b3;
 }
