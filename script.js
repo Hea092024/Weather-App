@@ -17,6 +17,20 @@ async function getWeatherData(city) {
   const result = await fetch(url);
   const data = await result.json();
 
+   document.getElementById(
+     "last-updated"
+   ).textContent = `Last updated: ${new Date(
+     data.current.last_updated
+   ).toLocaleString("en-GB", {
+     day: "numeric",
+     month: "long",
+     year: "numeric",
+     hour: "2-digit",
+     minute: "2-digit",
+     second: "2-digit",
+     hour12: false,
+   })}`;
+
   document.getElementById(
     "location"
   ).textContent = `${data.location.name}, ${data.location.country}`;
