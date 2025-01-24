@@ -142,3 +142,8 @@ footer a:active {
   }
 }
 
+@media (max-width: 480px) {
+  .logo img {
+    height: 8em;
+  }
+}
